@@ -52,8 +52,6 @@
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classhffix_1_1message__reader__const__iterator-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -69,19 +67,24 @@
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:ac06467a94c257cd3f4b70651c89c1ca9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac06467a94c257cd3f4b70651c89c1ca9"></a>
-typedef ::std::input_iterator_tag&#160;</td><td class="memItemRight" valign="bottom"><b>iterator_category</b></td></tr>
+typedef ::std::input_iterator_tag&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__reader__const__iterator.html#ac06467a94c257cd3f4b70651c89c1ca9">iterator_category</a></td></tr>
+<tr class="memdesc:ac06467a94c257cd3f4b70651c89c1ca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">For std::iterator_traits. <br/></td></tr>
 <tr class="separator:ac06467a94c257cd3f4b70651c89c1ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a477b60f3cb587cb801eb012d8ac4fb26"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a477b60f3cb587cb801eb012d8ac4fb26"></a>
-typedef <a class="el" href="classhffix_1_1field.html">field</a>&#160;</td><td class="memItemRight" valign="bottom"><b>value_type</b></td></tr>
+typedef <a class="el" href="classhffix_1_1field.html">field</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__reader__const__iterator.html#a477b60f3cb587cb801eb012d8ac4fb26">value_type</a></td></tr>
+<tr class="memdesc:a477b60f3cb587cb801eb012d8ac4fb26"><td class="mdescLeft">&#160;</td><td class="mdescRight">For std::iterator_traits. <br/></td></tr>
 <tr class="separator:a477b60f3cb587cb801eb012d8ac4fb26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a524120d568fbd89bd4c1035009927667"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a524120d568fbd89bd4c1035009927667"></a>
-typedef std::ptrdiff_t&#160;</td><td class="memItemRight" valign="bottom"><b>difference_type</b></td></tr>
+typedef std::ptrdiff_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__reader__const__iterator.html#a524120d568fbd89bd4c1035009927667">difference_type</a></td></tr>
+<tr class="memdesc:a524120d568fbd89bd4c1035009927667"><td class="mdescLeft">&#160;</td><td class="mdescRight">For std::iterator_traits. <br/></td></tr>
 <tr class="separator:a524120d568fbd89bd4c1035009927667"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46f7f86e4e5442d46877262804d0d2cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46f7f86e4e5442d46877262804d0d2cc"></a>
-typedef <a class="el" href="classhffix_1_1field.html">field</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>pointer</b></td></tr>
+typedef <a class="el" href="classhffix_1_1field.html">field</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__reader__const__iterator.html#a46f7f86e4e5442d46877262804d0d2cc">pointer</a></td></tr>
+<tr class="memdesc:a46f7f86e4e5442d46877262804d0d2cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">For std::iterator_traits. <br/></td></tr>
 <tr class="separator:a46f7f86e4e5442d46877262804d0d2cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f552b740535d9915207552b3e3f6826"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f552b740535d9915207552b3e3f6826"></a>
-typedef <a class="el" href="classhffix_1_1field.html">field</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>reference</b></td></tr>
+typedef <a class="el" href="classhffix_1_1field.html">field</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__reader__const__iterator.html#a3f552b740535d9915207552b3e3f6826">reference</a></td></tr>
+<tr class="memdesc:a3f552b740535d9915207552b3e3f6826"><td class="mdescLeft">&#160;</td><td class="mdescRight">For std::iterator_traits. <br/></td></tr>
 <tr class="separator:a3f552b740535d9915207552b3e3f6826"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -95,57 +98,107 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a07cda8bdb5fdd5a087b2d193cf155a22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a hffix::message_reader::const_pointer to a field. <br/></td></tr>
 <tr class="separator:a07cda8bdb5fdd5a087b2d193cf155a22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae825edd1f7cae084bede783718c642c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae825edd1f7cae084bede783718c642c"></a>
-<a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator++</b> (int)</td></tr>
+<a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__reader__const__iterator.html#aae825edd1f7cae084bede783718c642c">operator++</a> (int)</td></tr>
+<tr class="memdesc:aae825edd1f7cae084bede783718c642c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Postfix increment. <br/></td></tr>
 <tr class="separator:aae825edd1f7cae084bede783718c642c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e8d5e625f96016cf1aea3e51667f72c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2e8d5e625f96016cf1aea3e51667f72c"></a>
-<a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator++</b> ()</td></tr>
+<a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__reader__const__iterator.html#a2e8d5e625f96016cf1aea3e51667f72c">operator++</a> ()</td></tr>
+<tr class="memdesc:a2e8d5e625f96016cf1aea3e51667f72c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefix increment. <br/></td></tr>
 <tr class="separator:a2e8d5e625f96016cf1aea3e51667f72c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a816f33fad3f36b83a309de1182a5a9d6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a816f33fad3f36b83a309de1182a5a9d6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>increment</b> ()</td></tr>
-<tr class="separator:a816f33fad3f36b83a309de1182a5a9d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:aa913c5f3b423c43117287b1b03d72e2a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa913c5f3b423c43117287b1b03d72e2a"></a>
-<a class="el" href="classhffix_1_1message__reader.html">message_reader</a> const *&#160;</td><td class="memItemRight" valign="bottom"><b>message_reader_</b></td></tr>
-<tr class="separator:aa913c5f3b423c43117287b1b03d72e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf90efa472759b974b1ce668f5607b91"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf90efa472759b974b1ce668f5607b91"></a>
-char const *&#160;</td><td class="memItemRight" valign="bottom"><b>buffer_</b></td></tr>
-<tr class="separator:adf90efa472759b974b1ce668f5607b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21ebcbb7907f0761ead1f7257fd711ca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a21ebcbb7907f0761ead1f7257fd711ca"></a>
-<a class="el" href="classhffix_1_1field.html">field</a>&#160;</td><td class="memItemRight" valign="bottom"><b>current_</b></td></tr>
-<tr class="separator:a21ebcbb7907f0761ead1f7257fd711ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a0c884afbafe8ee77252ef8373f8ca145"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c884afbafe8ee77252ef8373f8ca145"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (<a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> const &amp;a, <a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> const &amp;b)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__reader__const__iterator.html#a0c884afbafe8ee77252ef8373f8ca145">operator==</a> (<a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> const &amp;a, <a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> const &amp;b)</td></tr>
+<tr class="memdesc:a0c884afbafe8ee77252ef8373f8ca145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Equal. <br/></td></tr>
 <tr class="separator:a0c884afbafe8ee77252ef8373f8ca145"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae82a8b43710b151ee65a507254420b3d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae82a8b43710b151ee65a507254420b3d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (<a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> const &amp;a, <a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> const &amp;b)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__reader__const__iterator.html#ae82a8b43710b151ee65a507254420b3d">operator!=</a> (<a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> const &amp;a, <a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> const &amp;b)</td></tr>
+<tr class="memdesc:ae82a8b43710b151ee65a507254420b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not equal. <br/></td></tr>
 <tr class="separator:ae82a8b43710b151ee65a507254420b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4907d48ba9f34b9baa599a77d35cce13"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4907d48ba9f34b9baa599a77d35cce13"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;</b> (<a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> const &amp;a, <a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> const &amp;b)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__reader__const__iterator.html#a4907d48ba9f34b9baa599a77d35cce13">operator&lt;</a> (<a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> const &amp;a, <a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> const &amp;b)</td></tr>
+<tr class="memdesc:a4907d48ba9f34b9baa599a77d35cce13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Less-than. <br/></td></tr>
 <tr class="separator:a4907d48ba9f34b9baa599a77d35cce13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6115db6165179689e331a38d1a6c618"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6115db6165179689e331a38d1a6c618"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;</b> (<a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> const &amp;a, <a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> const &amp;b)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__reader__const__iterator.html#ad6115db6165179689e331a38d1a6c618">operator&gt;</a> (<a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> const &amp;a, <a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> const &amp;b)</td></tr>
+<tr class="memdesc:ad6115db6165179689e331a38d1a6c618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Greater-than. <br/></td></tr>
 <tr class="separator:ad6115db6165179689e331a38d1a6c618"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d87c328ee4bd466fa1d021ee400d48e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d87c328ee4bd466fa1d021ee400d48e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;=</b> (<a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> const &amp;a, <a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> const &amp;b)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__reader__const__iterator.html#a8d87c328ee4bd466fa1d021ee400d48e">operator&lt;=</a> (<a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> const &amp;a, <a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> const &amp;b)</td></tr>
+<tr class="memdesc:a8d87c328ee4bd466fa1d021ee400d48e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Less-than or equal. <br/></td></tr>
 <tr class="separator:a8d87c328ee4bd466fa1d021ee400d48e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4816c2f093d9e9b86dc1cd9c940550af"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4816c2f093d9e9b86dc1cd9c940550af"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator&gt;=</b> (<a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> const &amp;a, <a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> const &amp;b)</td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__reader__const__iterator.html#a4816c2f093d9e9b86dc1cd9c940550af">operator&gt;=</a> (<a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> const &amp;a, <a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> const &amp;b)</td></tr>
+<tr class="memdesc:a4816c2f093d9e9b86dc1cd9c940550af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Greater-than or equal. <br/></td></tr>
 <tr class="separator:a4816c2f093d9e9b86dc1cd9c940550af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd8cc7ec3ed065879bc315ed052a897c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__reader__const__iterator.html#abd8cc7ec3ed065879bc315ed052a897c">operator+</a> (<a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> a, int addend)</td></tr>
+<tr class="memdesc:abd8cc7ec3ed065879bc315ed052a897c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Addition.  <a href="#abd8cc7ec3ed065879bc315ed052a897c">More...</a><br/></td></tr>
+<tr class="separator:abd8cc7ec3ed065879bc315ed052a897c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9567b350ee7f845736c32dc115bb2435"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9567b350ee7f845736c32dc115bb2435"></a>
+<a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__reader__const__iterator.html#a9567b350ee7f845736c32dc115bb2435">operator+</a> (int addend, <a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> a)</td></tr>
+<tr class="memdesc:a9567b350ee7f845736c32dc115bb2435"><td class="mdescLeft">&#160;</td><td class="mdescRight">Addition. <br/></td></tr>
+<tr class="separator:a9567b350ee7f845736c32dc115bb2435"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The iterator type for <a class="el" href="classhffix_1_1message__reader.html" title="One FIX message for reading.">hffix::message_reader</a>. Typedef'd as <code>hffix::message_reader::const_iterator</code>. </p>
 <p>Satisfies the const Input Iterator Concept for an immutable <a class="el" href="classhffix_1_1message__reader.html" title="One FIX message for reading.">hffix::message_reader</a> container of fields. </p>
 
-<p>Definition at line <a class="el" href="hffix_8hpp_source.html#l01249">1249</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<p>Definition at line <a class="el" href="hffix_8hpp_source.html#l01246">1246</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+</div><h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a class="anchor" id="abd8cc7ec3ed065879bc315ed052a897c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a> operator+ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classhffix_1_1message__reader__const__iterator.html">message_reader_const_iterator</a>&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>addend</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Addition. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Iterator to add to. </td></tr>
+    <tr><td class="paramname">addend</td><td>Addend. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">logic_error</td><td>Throws if <em>addend &lt; 0</em> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><em>addend &gt;= 0</em> </dd></dl>
+
+<p>Definition at line <a class="el" href="hffix_8hpp_source.html#l01337">1337</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="hffix_8hpp_source.html">hffix.hpp</a></li>
 </ul>
 </div><!-- contents -->
