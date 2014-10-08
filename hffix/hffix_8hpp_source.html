@@ -1298,10 +1298,10 @@
 <div class="line"><a name="l01880"></a><span class="lineno"> 1880</span>&#160;<span class="comment">/* @cond EXCLUDE */</span></div>
 <div class="line"><a name="l01881"></a><span class="lineno"> 1881</span>&#160;</div>
 <div class="line"><a name="l01882"></a><span class="lineno"> 1882</span>&#160;<span class="keyword">namespace </span>details {</div>
-<div class="line"><a name="l01883"></a><span class="lineno"> 1883</span>&#160;<span class="keywordtype">bool</span> is_tag_a_data_length(<span class="keywordtype">int</span> tag)</div>
+<div class="line"><a name="l01883"></a><span class="lineno"> 1883</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> is_tag_a_data_length(<span class="keywordtype">int</span> tag)</div>
 <div class="line"><a name="l01884"></a><span class="lineno"> 1884</span>&#160;{</div>
-<div class="line"><a name="l01885"></a><span class="lineno"> 1885</span>&#160;    <span class="keywordtype">int</span>* length_fields_end = <a class="code" href="namespacehffix.html#a146578c7fa68e6a9b4a26b4c4c813866" title="Sorted list of all field tags which are of type Length.">length_fields</a> + (<span class="keyword">sizeof</span>(<a class="code" href="namespacehffix.html#a146578c7fa68e6a9b4a26b4c4c813866" title="Sorted list of all field tags which are of type Length.">length_fields</a>)/<span class="keyword">sizeof</span>(<a class="code" href="namespacehffix.html#a146578c7fa68e6a9b4a26b4c4c813866" title="Sorted list of all field tags which are of type Length.">length_fields</a>[0]));</div>
-<div class="line"><a name="l01886"></a><span class="lineno"> 1886</span>&#160;    <span class="keywordflow">return</span> std::find(<a class="code" href="namespacehffix.html#a146578c7fa68e6a9b4a26b4c4c813866" title="Sorted list of all field tags which are of type Length.">length_fields</a>, length_fields_end, tag) != length_fields_end; <span class="comment">// fields are ordered, so this could be std::binary_search.</span></div>
+<div class="line"><a name="l01885"></a><span class="lineno"> 1885</span>&#160;    <span class="keywordtype">int</span>* length_fields_end = length_fields + (<span class="keyword">sizeof</span>(length_fields)/<span class="keyword">sizeof</span>(length_fields[0]));</div>
+<div class="line"><a name="l01886"></a><span class="lineno"> 1886</span>&#160;    <span class="keywordflow">return</span> std::find(length_fields, length_fields_end, tag) != length_fields_end; <span class="comment">// fields are ordered, so this could be std::binary_search.</span></div>
 <div class="line"><a name="l01887"></a><span class="lineno"> 1887</span>&#160;}</div>
 <div class="line"><a name="l01888"></a><span class="lineno"> 1888</span>&#160;</div>
 <div class="line"><a name="l01889"></a><span class="lineno"> 1889</span>&#160;<span class="comment">// \brief std::ostream-able type returned by hffix::field_name function.</span></div>
@@ -1318,20 +1318,21 @@
 <div class="line"><a name="l01900"></a><span class="lineno"> 1900</span>&#160;            os &lt;&lt; i-&gt;second;</div>
 <div class="line"><a name="l01901"></a><span class="lineno"> 1901</span>&#160;        <span class="keywordflow">else</span> if (that.number_alternative)</div>
 <div class="line"><a name="l01902"></a><span class="lineno"> 1902</span>&#160;            os &lt;&lt; that.tag;</div>
-<div class="line"><a name="l01903"></a><span class="lineno"> 1903</span>&#160;    }</div>
-<div class="line"><a name="l01904"></a><span class="lineno"> 1904</span>&#160;};</div>
-<div class="line"><a name="l01905"></a><span class="lineno"> 1905</span>&#160;</div>
-<div class="line"><a name="l01906"></a><span class="lineno"> 1906</span>&#160;}</div>
-<div class="line"><a name="l01907"></a><span class="lineno"> 1907</span>&#160;<span class="comment">/* @endcond */</span></div>
-<div class="line"><a name="l01908"></a><span class="lineno"> 1908</span>&#160;</div>
-<div class="line"><a name="l01926"></a><span class="lineno"><a class="code" href="namespacehffix.html#a1cee7e096a9773f5e21c551dc861a8ad"> 1926</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> AssociativeContainer&gt; details::field_name_streamer&lt;AssociativeContainer&gt; <a class="code" href="namespacehffix.html#a1cee7e096a9773f5e21c551dc861a8ad" title="Given a field tag number and a field name dictionary, returns a type which provides operator&lt;&lt;  to wr...">field_name</a>(<span class="keywordtype">int</span> tag, AssociativeContainer <span class="keyword">const</span>&amp; field_dictionary, <span class="keywordtype">bool</span> or_number = <span class="keyword">true</span>)</div>
-<div class="line"><a name="l01927"></a><span class="lineno"> 1927</span>&#160;{</div>
-<div class="line"><a name="l01928"></a><span class="lineno"> 1928</span>&#160;    <span class="keywordflow">return</span> details::field_name_streamer&lt;AssociativeContainer&gt;(tag, field_dictionary, or_number);</div>
-<div class="line"><a name="l01929"></a><span class="lineno"> 1929</span>&#160;};</div>
-<div class="line"><a name="l01930"></a><span class="lineno"> 1930</span>&#160;</div>
-<div class="line"><a name="l01931"></a><span class="lineno"> 1931</span>&#160;} <span class="comment">// namespace hffix</span></div>
-<div class="line"><a name="l01932"></a><span class="lineno"> 1932</span>&#160;</div>
-<div class="line"><a name="l01933"></a><span class="lineno"> 1933</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01903"></a><span class="lineno"> 1903</span>&#160;        <span class="keywordflow">return</span> os;</div>
+<div class="line"><a name="l01904"></a><span class="lineno"> 1904</span>&#160;    }</div>
+<div class="line"><a name="l01905"></a><span class="lineno"> 1905</span>&#160;};</div>
+<div class="line"><a name="l01906"></a><span class="lineno"> 1906</span>&#160;</div>
+<div class="line"><a name="l01907"></a><span class="lineno"> 1907</span>&#160;}</div>
+<div class="line"><a name="l01908"></a><span class="lineno"> 1908</span>&#160;<span class="comment">/* @endcond */</span></div>
+<div class="line"><a name="l01909"></a><span class="lineno"> 1909</span>&#160;</div>
+<div class="line"><a name="l01927"></a><span class="lineno"><a class="code" href="namespacehffix.html#a1cee7e096a9773f5e21c551dc861a8ad"> 1927</a></span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> AssociativeContainer&gt; details::field_name_streamer&lt;AssociativeContainer&gt; <a class="code" href="namespacehffix.html#a1cee7e096a9773f5e21c551dc861a8ad" title="Given a field tag number and a field name dictionary, returns a type which provides operator&lt;&lt; to wri...">field_name</a>(<span class="keywordtype">int</span> tag, AssociativeContainer <span class="keyword">const</span>&amp; field_dictionary, <span class="keywordtype">bool</span> or_number = <span class="keyword">true</span>)</div>
+<div class="line"><a name="l01928"></a><span class="lineno"> 1928</span>&#160;{</div>
+<div class="line"><a name="l01929"></a><span class="lineno"> 1929</span>&#160;    <span class="keywordflow">return</span> details::field_name_streamer&lt;AssociativeContainer&gt;(tag, field_dictionary, or_number);</div>
+<div class="line"><a name="l01930"></a><span class="lineno"> 1930</span>&#160;};</div>
+<div class="line"><a name="l01931"></a><span class="lineno"> 1931</span>&#160;</div>
+<div class="line"><a name="l01932"></a><span class="lineno"> 1932</span>&#160;} <span class="comment">// namespace hffix</span></div>
+<div class="line"><a name="l01933"></a><span class="lineno"> 1933</span>&#160;</div>
+<div class="line"><a name="l01934"></a><span class="lineno"> 1934</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

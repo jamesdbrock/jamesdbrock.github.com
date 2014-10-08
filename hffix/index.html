@@ -56,8 +56,7 @@ util/bin/fixprint --color &lt; test/data/fix.5.0.set.2 | less -R
 </pre><h3>Development</h3>
 <p>The library is header-only, so there is nothing to link. To use the <code><a class="el" href="hffix_8hpp.html" title="The High Frequency FIX Parser Library. Repository at http://github.com/jamesdbrock/hffix.">hffix.hpp</a></code> library for C++ FIX development, place the two header files in your include path and <code>#include &lt;<a class="el" href="hffix_8hpp.html" title="The High Frequency FIX Parser Library. Repository at http://github.com/jamesdbrock/hffix.">hffix.hpp</a>&gt;</code>. </p>
 <pre class="fragment">git clone https://github.com/jamesdbrock/hffix.git
-cp hffix/include/hffix.hpp /usr/include/
-cp hffix/include/hffix_fields.hpp /usr/include/
+cp hffix/include/hffix.hpp hffix/include/hffix_fields.hpp /usr/include/
 </pre><h3>Documentation</h3>
 <p>Full Doxygen is on the internet at <a href="http://jamesdbrock.github.com/hffix">http://jamesdbrock.github.com/hffix</a></p>
 <p>To build the Doxygen html documentation in the <code>doc/html</code> directory and view it: </p>
@@ -234,7 +233,7 @@ xdg-open doc/html/index.html
 <div class="line">                        <span class="keywordflow">if</span> (reader.find_with_hint(<a class="code" href="namespacehffix_1_1tag.html#a66ea8cc10760e55c6f323a7edfe3487ba90e2170482ce314ceef2d58ccc6d0638" title="52 (UTCTimestamp 5.0.SP2) (UTCTimestamp 4.4)">hffix::tag::SendingTime</a>, i))</div>
 <div class="line">                            std::cout &lt;&lt; <span class="stringliteral">&quot;SendingTime  = &quot;</span> &lt;&lt; i++-&gt;value().as_timestamp() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
 <div class="line"></div>
-<div class="line">                        std::cout &lt;&lt; <span class="stringliteral">&quot;The next field is &quot;</span> &lt;&lt; <a class="code" href="namespacehffix.html#a1cee7e096a9773f5e21c551dc861a8ad" title="Given a field tag number and a field name dictionary, returns a type which provides operator&lt;&lt;  to wr...">hffix::field_name</a>(i-&gt;<a class="code" href="classhffix_1_1field.html#a611ff1811b40eb040da949113af5b283" title="Tag of the field.">tag</a>(), field_dictionary) &lt;&lt; <span class="stringliteral">&quot; = &quot;</span> &lt;&lt; i-&gt;<a class="code" href="classhffix_1_1field.html#a55da70f3c4fd65c4cf5b9de0b53d6c87" title="Weakly-typed value of the field.">value</a>() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
+<div class="line">                        std::cout &lt;&lt; <span class="stringliteral">&quot;The next field is &quot;</span> &lt;&lt; <a class="code" href="namespacehffix.html#a1cee7e096a9773f5e21c551dc861a8ad" title="Given a field tag number and a field name dictionary, returns a type which provides operator&lt;&lt; to wri...">hffix::field_name</a>(i-&gt;<a class="code" href="classhffix_1_1field.html#a611ff1811b40eb040da949113af5b283" title="Tag of the field.">tag</a>(), field_dictionary) &lt;&lt; <span class="stringliteral">&quot; = &quot;</span> &lt;&lt; i-&gt;<a class="code" href="classhffix_1_1field.html#a55da70f3c4fd65c4cf5b9de0b53d6c87" title="Weakly-typed value of the field.">value</a>() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
 <div class="line"></div>
 <div class="line">                        std::cout &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;</div>
 <div class="line">                    }</div>
@@ -301,8 +300,9 @@ The next field is EncryptMethod = 0<br/>
 
 New Order Single message
 Buy OIH 100 @ $50001E-2
-</span></pre><p>To examine the output from <code>test/bin/writer01</code> program, you can also use <code>/util/bin/fixprint</code>, like this: </p>
-<pre class="fragment">make fixprint
+</span></pre><p>To examine the output from <code>test/bin/writer01</code> program, you can also use <code>util/bin/fixprint</code>, like this: </p>
+<pre class="fragment">make examples
+make fixprint
 test/bin/writer01 | util/bin/fixprint --color
 </pre><p>Which will produce output like this:</p>
 <pre style="white-space:pre-wrap;background-color:#171717;padding:1em;">

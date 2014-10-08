@@ -47,8 +47,7 @@
   <div class="summary">
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">hffix Namespace Reference</div>  </div>
 </div><!--header-->
@@ -93,7 +92,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a1cee7e096a9773f5e21c551dc861a8ad"><td class="memTemplParams" colspan="2">template&lt;typename AssociativeContainer &gt; </td></tr>
 <tr class="memitem:a1cee7e096a9773f5e21c551dc861a8ad"><td class="memTemplItemLeft" align="right" valign="top">details::field_name_streamer<br class="typebreak"/>
 &lt; AssociativeContainer &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacehffix.html#a1cee7e096a9773f5e21c551dc861a8ad">field_name</a> (int tag, AssociativeContainer const &amp;field_dictionary, bool or_number=true)</td></tr>
-<tr class="memdesc:a1cee7e096a9773f5e21c551dc861a8ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a field tag number and a field name dictionary, returns a type which provides <code>operator&lt;&lt; </code> to write the name of the field to an std::ostream.  <a href="#a1cee7e096a9773f5e21c551dc861a8ad">More...</a><br/></td></tr>
+<tr class="memdesc:a1cee7e096a9773f5e21c551dc861a8ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Given a field tag number and a field name dictionary, returns a type which provides <code>operator&lt;&lt;</code> to write the name of the field to an <code>std::ostream</code>.  <a href="#a1cee7e096a9773f5e21c551dc861a8ad">More...</a><br/></td></tr>
 <tr class="separator:a1cee7e096a9773f5e21c551dc861a8ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a9146dc05a357c892cb03ee878463aa"><td class="memTemplParams" colspan="2">template&lt;typename AssociativeContainer &gt; </td></tr>
 <tr class="memitem:a7a9146dc05a357c892cb03ee878463aa"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacehffix.html#a7a9146dc05a357c892cb03ee878463aa">dictionary_init_field</a> (AssociativeContainer &amp;dictionary)</td></tr>
@@ -103,12 +102,6 @@ Functions</h2></td></tr>
 <tr class="memitem:af322b2462485c39f5e68e03a9cab83bd"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacehffix.html#af322b2462485c39f5e68e03a9cab83bd">dictionary_init_message</a> (AssociativeContainer &amp;dictionary)</td></tr>
 <tr class="memdesc:af322b2462485c39f5e68e03a9cab83bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Populate an AssociativeContainer with the names of all the FIX message types.  <a href="#af322b2462485c39f5e68e03a9cab83bd">More...</a><br/></td></tr>
 <tr class="separator:af322b2462485c39f5e68e03a9cab83bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a146578c7fa68e6a9b4a26b4c4c813866"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehffix.html#a146578c7fa68e6a9b4a26b4c4c813866">length_fields</a> []</td></tr>
-<tr class="memdesc:a146578c7fa68e6a9b4a26b4c4c813866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sorted list of all field tags which are of type Length.  <a href="#a146578c7fa68e6a9b4a26b4c4c813866">More...</a><br/></td></tr>
-<tr class="separator:a146578c7fa68e6a9b4a26b4c4c813866"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Namespace for all types and functions of High Frequency FIX Parser. </p>
@@ -137,7 +130,7 @@ template&lt;typename AssociativeContainer &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="hffix__fields_8hpp_source.html#l01430">1430</a> of file <a class="el" href="hffix__fields_8hpp_source.html">hffix_fields.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hffix__fields_8hpp_source.html#l01432">1432</a> of file <a class="el" href="hffix__fields_8hpp_source.html">hffix_fields.hpp</a>.</p>
 
 </div>
 </div>
@@ -165,7 +158,7 @@ template&lt;typename AssociativeContainer &gt; </div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="hffix__fields_8hpp_source.html#l02818">2818</a> of file <a class="el" href="hffix__fields_8hpp_source.html">hffix_fields.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hffix__fields_8hpp_source.html#l02820">2820</a> of file <a class="el" href="hffix__fields_8hpp_source.html">hffix_fields.hpp</a>.</p>
 
 </div>
 </div>
@@ -201,7 +194,7 @@ template&lt;typename AssociativeContainer &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>Given a field tag number and a field name dictionary, returns a type which provides <code>operator&lt;&lt; </code> to write the name of the field to an std::ostream. </p>
+<p>Given a field tag number and a field name dictionary, returns a type which provides <code>operator&lt;&lt;</code> to write the name of the field to an <code>std::ostream</code>. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">AssociativeContainer</td><td>The type of the field name dictionary. Must satisfy concept <code>AssociativeContainer&lt;int, std::string&gt;</code>, for example <code>std::map&lt;int, std::string&gt;</code> or <code>std::unordered_map&lt;int, std::string&gt;</code>. See <a href="http://en.cppreference.com/w/cpp/concept/AssociativeContainer">http://en.cppreference.com/w/cpp/concept/AssociativeContainer</a></td></tr>
@@ -219,11 +212,11 @@ template&lt;typename AssociativeContainer &gt; </div>
 <p>Example usage: </p>
 <div class="fragment"><div class="line">std::map&lt;int, std::string&gt; dictionary;</div>
 <div class="line">hffix::field_dictionary_init(dictionary);</div>
-<div class="line">std::cout &lt;&lt; <a class="code" href="namespacehffix.html#a1cee7e096a9773f5e21c551dc861a8ad" title="Given a field tag number and a field name dictionary, returns a type which provides operator&lt;&lt;  to wr...">hffix::field_name</a>(<a class="code" href="namespacehffix_1_1tag.html#a66ea8cc10760e55c6f323a7edfe3487baa745e1759f1ef78abff6585521b21159" title="49 (String 5.0.SP2) (String 4.4)">hffix::tag::SenderCompID</a>, dictionary) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>; <span class="comment">// Will print &quot;SenderCompID\n&quot;.</span></div>
-<div class="line">std::cout &lt;&lt; <a class="code" href="namespacehffix.html#a1cee7e096a9773f5e21c551dc861a8ad" title="Given a field tag number and a field name dictionary, returns a type which provides operator&lt;&lt;  to wr...">hffix::field_name</a>(1000000, dictionary) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;                  <span class="comment">// Unknown field tag, will print &quot;1000000\n&quot;.</span></div>
-<div class="line">std::cout &lt;&lt; <a class="code" href="namespacehffix.html#a1cee7e096a9773f5e21c551dc861a8ad" title="Given a field tag number and a field name dictionary, returns a type which provides operator&lt;&lt;  to wr...">hffix::field_name</a>(1000000, dictionary, <span class="keyword">false</span>) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;           <span class="comment">// Unknown field tag, will print &quot;\n&quot;.</span></div>
+<div class="line">std::cout &lt;&lt; <a class="code" href="namespacehffix.html#a1cee7e096a9773f5e21c551dc861a8ad" title="Given a field tag number and a field name dictionary, returns a type which provides operator&lt;&lt; to wri...">hffix::field_name</a>(<a class="code" href="namespacehffix_1_1tag.html#a66ea8cc10760e55c6f323a7edfe3487baa745e1759f1ef78abff6585521b21159" title="49 (String 5.0.SP2) (String 4.4)">hffix::tag::SenderCompID</a>, dictionary) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>; <span class="comment">// Will print &quot;SenderCompID\n&quot;.</span></div>
+<div class="line">std::cout &lt;&lt; <a class="code" href="namespacehffix.html#a1cee7e096a9773f5e21c551dc861a8ad" title="Given a field tag number and a field name dictionary, returns a type which provides operator&lt;&lt; to wri...">hffix::field_name</a>(1000000, dictionary) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;                  <span class="comment">// Unknown field tag, will print &quot;1000000\n&quot;.</span></div>
+<div class="line">std::cout &lt;&lt; <a class="code" href="namespacehffix.html#a1cee7e096a9773f5e21c551dc861a8ad" title="Given a field tag number and a field name dictionary, returns a type which provides operator&lt;&lt; to wri...">hffix::field_name</a>(1000000, dictionary, <span class="keyword">false</span>) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;           <span class="comment">// Unknown field tag, will print &quot;\n&quot;.</span></div>
 </div><!-- fragment --> 
-<p>Definition at line <a class="el" href="hffix_8hpp_source.html#l01926">1926</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p>Definition at line <a class="el" href="hffix_8hpp_source.html#l01927">1927</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -305,43 +298,6 @@ template&lt;typename ForwardIterator , typename UnaryPredicate &gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>True if an item was found which matched <code>predicate</code>, and <code>i</code> was modified to point to the found item. </dd></dl>
 
 <p>Definition at line <a class="el" href="hffix_8hpp_source.html#l01411">1411</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="a146578c7fa68e6a9b4a26b4c4c813866"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int hffix::length_fields[]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line"><a class="code" href="namespacehffix_1_1tag.html#a66ea8cc10760e55c6f323a7edfe3487ba007f4374c37d424d4add7bd1e987670e" title="90 (Length 4.2)">tag::SecureDataLen</a>,                 </div>
-<div class="line"><a class="code" href="namespacehffix_1_1tag.html#a66ea8cc10760e55c6f323a7edfe3487ba50052ffcd81a8fdbc4e42b7d83c66e56" title="95 (Length 5.0.SP2) (Length 4.4)">tag::RawDataLength</a>,                 </div>
-<div class="line"><a class="code" href="namespacehffix_1_1tag.html#a66ea8cc10760e55c6f323a7edfe3487ba8c8da97552d5c993f35d9dd967d08096" title="212 (Length 4.2)">tag::XmlDataLen</a>,                    </div>
-<div class="line"><a class="code" href="namespacehffix_1_1tag.html#a66ea8cc10760e55c6f323a7edfe3487ba44723583047064a3d57c3b6100125c05" title="348 (Length 5.0.SP2) (Length 4.4) (Length 4.3)">tag::EncodedIssuerLen</a>,              </div>
-<div class="line"><a class="code" href="namespacehffix_1_1tag.html#a66ea8cc10760e55c6f323a7edfe3487ba605e4c00349505f433da2953fcb73667" title="350 (Length 5.0.SP2) (Length 4.4) (Length 4.3)">tag::EncodedSecurityDescLen</a>,        </div>
-<div class="line"><a class="code" href="namespacehffix_1_1tag.html#a66ea8cc10760e55c6f323a7edfe3487ba05ca10c12211cb27223ae097a0b22984" title="352 (Length 5.0.SP2) (Length 4.4) (Length 4.3)">tag::EncodedListExecInstLen</a>,        </div>
-<div class="line"><a class="code" href="namespacehffix_1_1tag.html#a66ea8cc10760e55c6f323a7edfe3487ba7a2892aa8049caad97ca89c5c6f5caf5" title="354 (Length 5.0.SP2) (Length 4.4) (Length 4.3)">tag::EncodedTextLen</a>,                </div>
-<div class="line"><a class="code" href="namespacehffix_1_1tag.html#a66ea8cc10760e55c6f323a7edfe3487ba55e443a6fcae61a61f0bb1746d2edce0" title="356 (Length 5.0.SP2) (Length 4.4) (Length 4.3)">tag::EncodedSubjectLen</a>,             </div>
-<div class="line"><a class="code" href="namespacehffix_1_1tag.html#a66ea8cc10760e55c6f323a7edfe3487badfdbe9a56e6020fdc52e7bd4d40f5338" title="358 (Length 5.0.SP2) (Length 4.4) (Length 4.3)">tag::EncodedHeadlineLen</a>,            </div>
-<div class="line"><a class="code" href="namespacehffix_1_1tag.html#a66ea8cc10760e55c6f323a7edfe3487ba42eaec77a0cff09d91b36afedee6cbba" title="360 (Length 5.0.SP2) (Length 4.4) (Length 4.3)">tag::EncodedAllocTextLen</a>,           </div>
-<div class="line"><a class="code" href="namespacehffix_1_1tag.html#a66ea8cc10760e55c6f323a7edfe3487ba737e81955901686de4418c5ed4f8b571" title="362 (Length 5.0.SP2) (Length 4.4) (Length 4.3)">tag::EncodedUnderlyingIssuerLen</a>,    </div>
-<div class="line"><a class="code" href="namespacehffix_1_1tag.html#a66ea8cc10760e55c6f323a7edfe3487baae6e5a0f66580813b9b79ca42b21e546" title="364 (Length 5.0.SP2) (Length 4.4) (Length 4.3)">tag::EncodedUnderlyingSecurityDescLen</a>, </div>
-<div class="line"><a class="code" href="namespacehffix_1_1tag.html#a66ea8cc10760e55c6f323a7edfe3487baec33c952220447791fc6d5f4501b807a" title="445 (Length 5.0.SP2) (Length 4.4) (Length 4.3)">tag::EncodedListStatusTextLen</a>,      </div>
-<div class="line"><a class="code" href="namespacehffix_1_1tag.html#a66ea8cc10760e55c6f323a7edfe3487ba347667c829595cc0d059e262b27ad84f" title="618 (Length 5.0.SP2) (Length 4.4) (Length 4.3)">tag::EncodedLegIssuerLen</a>,           </div>
-<div class="line"><a class="code" href="namespacehffix_1_1tag.html#a66ea8cc10760e55c6f323a7edfe3487bae027d69a19477e360e598e359a715fba" title="621 (Length 5.0.SP2) (Length 4.4) (Length 4.3)">tag::EncodedLegSecurityDescLen</a>,     </div>
-<div class="line"><a class="code" href="namespacehffix_1_1tag.html#a66ea8cc10760e55c6f323a7edfe3487bacf140ac2bd970d3498b4fab480e5bf52" title="1277 (Length 5.0.SP2)">tag::DerivativeEncodedIssuerLen</a>,    </div>
-<div class="line"><a class="code" href="namespacehffix_1_1tag.html#a66ea8cc10760e55c6f323a7edfe3487baa90466bb4eabda60f914f57ebb77ed27" title="1280 (Length 5.0.SP2)">tag::DerivativeEncodedSecurityDescLen</a>, </div>
-<div class="line"><a class="code" href="namespacehffix_1_1tag.html#a66ea8cc10760e55c6f323a7edfe3487ba4bc330cb3acde7bb7c98e1c0a2840a24" title="1397 (Length 5.0.SP2)">tag::EncodedMktSegmDescLen</a>          </div>
-<div class="line">}</div>
-</div><!-- fragment -->
-<p>Sorted list of all field tags which are of type Length. </p>
-
-<p>Definition at line <a class="el" href="hffix__fields_8hpp_source.html#l01404">1404</a> of file <a class="el" href="hffix__fields_8hpp_source.html">hffix_fields.hpp</a>.</p>
 
 </div>
 </div>
