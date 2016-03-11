@@ -24,7 +24,7 @@
 <text x="214" y="0" transform="rotate(270,214,0)" xml:space="preserve">   Scala   Scala   Scala   Scala   Scala   Scala   Scala</text>
 <text x="242" y="0" transform="rotate(270,242,0)" xml:space="preserve">   OCaml   OCaml   OCaml   OCaml   OCaml   OCaml   OCaml</text>
 <text x="270" y="0" transform="rotate(270,270,0)" xml:space="preserve">   Clojure   Clojure   Clojure   Clojure   Clojure   Clojure</text>
-<text x="298" y="0" transform="rotate(270,298,0)" xml:space="preserve">   Haskell GHC   Haskell GHC   Haskell GHC   Haskell GHC</text>
+<text style="stroke:black;fill:#990000;font-size:125%;" x="298" y="0" transform="rotate(270,298,0)" xml:space="preserve">   Haskell GHC   Haskell GHC   Haskell GHC   Haskell GHC</text>
 <text x="326" y="0" transform="rotate(270,326,0)" xml:space="preserve">   Swift   Swift   Swift   Swift   Swift   Swift   Swift</text>
 <text x="354" y="0" transform="rotate(270,354,0)" xml:space="preserve">   Lisp SBCL   Lisp SBCL   Lisp SBCL   Lisp SBCL   Lisp SBCL</text>
 <text x="382" y="0" transform="rotate(270,382,0)" xml:space="preserve">   C# Mono   C# Mono   C# Mono   C# Mono   C# Mono   C# Mono</text>

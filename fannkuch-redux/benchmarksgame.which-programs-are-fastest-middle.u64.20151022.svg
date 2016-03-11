@@ -18,7 +18,7 @@
 <text x="46" y="0" transform="rotate(270,46,0)" xml:space="preserve">   Scala   Scala   Scala   Scala   Scala   Scala   Scala</text>
 <text x="74" y="0" transform="rotate(270,74,0)" xml:space="preserve">   OCaml   OCaml   OCaml   OCaml   OCaml   OCaml   OCaml</text>
 <text x="102" y="0" transform="rotate(270,102,0)" xml:space="preserve">   Lisp SBCL   Lisp SBCL   Lisp SBCL   Lisp SBCL   Lisp SBCL</text>
-<text x="130" y="0" transform="rotate(270,130,0)" xml:space="preserve">   Haskell GHC   Haskell GHC   Haskell GHC   Haskell GHC</text>
+<text style="stroke:black;fill:#990000;font-size:125%;" x="130" y="0" transform="rotate(270,130,0)" xml:space="preserve">   Haskell GHC   Haskell GHC   Haskell GHC   Haskell GHC</text>
 <text x="158" y="0" transform="rotate(270,158,0)" xml:space="preserve">   Clojure   Clojure   Clojure   Clojure   Clojure   Clojure</text>
 <text x="186" y="0" transform="rotate(270,186,0)" xml:space="preserve">   C# Mono   C# Mono   C# Mono   C# Mono   C# Mono   C# Mono</text>
 <text x="214" y="0" transform="rotate(270,214,0)" xml:space="preserve">Pascal Free Pascal   Pascal Free Pascal   Pascal Free Pascal</text>
