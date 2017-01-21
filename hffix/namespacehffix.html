@@ -263,7 +263,7 @@ template&lt;typename ForwardIterator , typename UnaryPredicate &gt; </div>
 </div><div class="memdoc">
 
 <p>An algorithm similar to <code>std::find_if</code> for forward-searching over a range and finding items which match a predicate. </p>
-<p>Efficient when searching for multiple items and the expected ordering of the items is known. Searches from <code>i</code> to <code>end</code>, then searches from <code>begin</code> to <code>i</code>.</p>
+<p>Instead of searching from <code>begin</code> to <code>end</code>, searches from <code>i</code> to <code>end</code>, then searches from <code>begin</code> to <code>i</code>. Efficient for finding multiple items when the expected ordering of the items is known.</p>
 <p>This expression: </p><div class="fragment"><div class="line"><a class="code" href="namespacehffix.html#a6ec2751ee79e76fcdc40af061c307342">find_with_hint</a>(begin, end, i, predicate)</div></div><!-- fragment --><p> will behave exactly the same as this expression: </p><div class="fragment"><div class="line">end != (i = std::find_if(begin, end, predicate))</div></div><!-- fragment --><p> except for these two differences:</p><ul>
 <li>In the first expression, <code>i</code> is not modifed if no item is found.</li>
 <li>The first expression is faster if the found item is a near successor of <code>i</code>.</li>
