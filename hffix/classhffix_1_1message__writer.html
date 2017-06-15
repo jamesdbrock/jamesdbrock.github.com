@@ -72,9 +72,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af6eee2cbc43e54774f00bd8e5a2d22cc"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__writer.html#af6eee2cbc43e54774f00bd8e5a2d22cc">message_size</a> () const</td></tr>
 <tr class="memdesc:af6eee2cbc43e54774f00bd8e5a2d22cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Size of the message in bytes.  <a href="#af6eee2cbc43e54774f00bd8e5a2d22cc">More...</a><br /></td></tr>
 <tr class="separator:af6eee2cbc43e54774f00bd8e5a2d22cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a576e4341f730af0bb2d9e9eb4b122ccb"><td class="memItemLeft" align="right" valign="top"><a id="a576e4341f730af0bb2d9e9eb4b122ccb"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__writer.html#a576e4341f730af0bb2d9e9eb4b122ccb">message_begin</a> () const</td></tr>
-<tr class="memdesc:a576e4341f730af0bb2d9e9eb4b122ccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to beginning of the message. <br /></td></tr>
+<tr class="memitem:a576e4341f730af0bb2d9e9eb4b122ccb"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__writer.html#a576e4341f730af0bb2d9e9eb4b122ccb">message_begin</a> () const</td></tr>
+<tr class="memdesc:a576e4341f730af0bb2d9e9eb4b122ccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to beginning of the message.  <a href="#a576e4341f730af0bb2d9e9eb4b122ccb">More...</a><br /></td></tr>
 <tr class="separator:a576e4341f730af0bb2d9e9eb4b122ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a364e1c6af2d0d82f908ece1ae246b2eb"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__writer.html#a364e1c6af2d0d82f908ece1ae246b2eb">message_end</a> () const</td></tr>
 <tr class="memdesc:a364e1c6af2d0d82f908ece1ae246b2eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to past-the-end of the message.  <a href="#a364e1c6af2d0d82f908ece1ae246b2eb">More...</a><br /></td></tr>
@@ -247,6 +246,36 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a576e4341f730af0bb2d9e9eb4b122ccb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a576e4341f730af0bb2d9e9eb4b122ccb">&#9670;&nbsp;</a></span>message_begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* hffix::message_writer::message_begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to beginning of the message. </p>
+<dl class="section pre"><dt>Precondition</dt><dd>None. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00411">411</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+
+</div>
+</div>
 <a id="a364e1c6af2d0d82f908ece1ae246b2eb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a364e1c6af2d0d82f908ece1ae246b2eb">&#9670;&nbsp;</a></span>message_end()</h2>
 
@@ -273,7 +302,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <p>Pointer to past-the-end of the message. </p>
 <dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classhffix_1_1message__writer.html#a525795ff86e68c8727dc48db7877745e" title="Write the CheckSum field to the buffer. ">push_back_trailer()</a> has been called. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00417">417</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00419">419</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -350,7 +379,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00544">544</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00546">546</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -413,7 +442,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00857">857</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00859">859</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -474,7 +503,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00605">605</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00607">607</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -522,7 +551,7 @@ char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 </dl>
 <dl class="section see"><dt>See also</dt><dd>HFFIX_NO_BOOST_DATETIME </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00774">774</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00776">776</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -586,7 +615,7 @@ template&lt;typename Int_type &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00586">586</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00588">588</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -624,7 +653,7 @@ template&lt;typename Int_type &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00434">434</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00436">436</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -679,7 +708,7 @@ template&lt;typename Int_type &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00561">561</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00563">563</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -733,7 +762,7 @@ template&lt;typename Int_type &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00622">622</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00624">624</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -787,7 +816,7 @@ template&lt;typename Int_type &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00505">505</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00507">507</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -834,7 +863,7 @@ template&lt;typename Int_type &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00518">518</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00520">520</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -882,7 +911,7 @@ template&lt;typename Int_type &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00534">534</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00536">536</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -945,7 +974,7 @@ template&lt;typename Int_type &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00644">644</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00646">646</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -1014,7 +1043,7 @@ template&lt;typename Int_type &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00669">669</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00671">671</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -1064,7 +1093,7 @@ template&lt;typename Int_type &gt; </div>
 </dl>
 <dl class="section see"><dt>See also</dt><dd>HFFIX_NO_BOOST_DATETIME </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00790">790</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00792">792</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -1148,7 +1177,7 @@ template&lt;typename Int_type &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00701">701</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00703">703</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -1238,7 +1267,7 @@ template&lt;typename Int_type &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00736">736</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00738">738</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -1288,7 +1317,7 @@ template&lt;typename Int_type &gt; </div>
 </dl>
 <dl class="section see"><dt>See also</dt><dd>HFFIX_NO_BOOST_DATETIME </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00812">812</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00814">814</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -1327,7 +1356,7 @@ template&lt;typename Int_type &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00461">461</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00463">463</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
