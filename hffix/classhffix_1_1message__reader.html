@@ -90,6 +90,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac6655e0ed9d371011980c4f25d0f135c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__reader.html#ac6655e0ed9d371011980c4f25d0f135c">message_reader</a> (<a class="el" href="classhffix_1_1message__writer.html">message_writer</a> const &amp;that)</td></tr>
 <tr class="memdesc:ac6655e0ed9d371011980c4f25d0f135c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classhffix_1_1message__reader.html" title="One FIX message for reading. ">message_reader</a> from a <a class="el" href="classhffix_1_1message__writer.html" title="One FIX message for writing. ">message_writer</a>. Equivalent to.  <a href="#ac6655e0ed9d371011980c4f25d0f135c">More...</a><br /></td></tr>
 <tr class="separator:ac6655e0ed9d371011980c4f25d0f135c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c76cd4d21c2c493b4cfd9215d233227"><td class="memTemplParams" colspan="2">template&lt;size_t N&gt; </td></tr>
+<tr class="memitem:a8c76cd4d21c2c493b4cfd9215d233227"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__reader.html#a8c76cd4d21c2c493b4cfd9215d233227">message_reader</a> (const char(&amp;buffer)[N])</td></tr>
+<tr class="memdesc:a8c76cd4d21c2c493b4cfd9215d233227"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct on an array reference to a buffer.  <a href="#a8c76cd4d21c2c493b4cfd9215d233227">More...</a><br /></td></tr>
+<tr class="separator:a8c76cd4d21c2c493b4cfd9215d233227"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30b18ab7cf02af464be23d47553b1c36"><td class="memItemLeft" align="right" valign="top"><a id="a30b18ab7cf02af464be23d47553b1c36"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__reader.html#a30b18ab7cf02af464be23d47553b1c36">~message_reader</a> ()</td></tr>
 <tr class="memdesc:a30b18ab7cf02af464be23d47553b1c36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Owns no resources, so destruction is no-op. <br /></td></tr>
@@ -168,10 +172,10 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 </ul>
 <p>Fields of binary data type are content fields, and will be iterated over like any other field. The special FIX binary data length framing fields will be skipped, but the length of the binary data is accessible from the <a class="el" href="classhffix_1_1field.html#a8b49d7e48a67d34b9033eef7855cd1c8" title="Weakly-typed value of the field. ">hffix::message_reader::value_type::value()</a>.size() of the content field. </p>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01518">1518</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01660">1660</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7e0c4998a982e6dd4cb98f1f52c1d1aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e0c4998a982e6dd4cb98f1f52c1d1aa">&#9670;&nbsp;</a></span>message_reader() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e0c4998a982e6dd4cb98f1f52c1d1aa">&#9670;&nbsp;</a></span>message_reader() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -213,12 +217,12 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01533">1533</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01675">1675</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
 <a id="aa80256aadc3196d7f8f58d02936e613b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa80256aadc3196d7f8f58d02936e613b">&#9670;&nbsp;</a></span>message_reader() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa80256aadc3196d7f8f58d02936e613b">&#9670;&nbsp;</a></span>message_reader() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -260,12 +264,12 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01548">1548</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01690">1690</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
 <a id="ac6655e0ed9d371011980c4f25d0f135c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac6655e0ed9d371011980c4f25d0f135c">&#9670;&nbsp;</a></span>message_reader() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6655e0ed9d371011980c4f25d0f135c">&#9670;&nbsp;</a></span>message_reader() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -290,7 +294,51 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 
 <p>Construct a <a class="el" href="classhffix_1_1message__reader.html" title="One FIX message for reading. ">message_reader</a> from a <a class="el" href="classhffix_1_1message__writer.html" title="One FIX message for writing. ">message_writer</a>. Equivalent to. </p>
 <div class="fragment"><div class="line"><a class="code" href="classhffix_1_1message__writer.html">hffix::message_writer</a> w;</div><div class="line"><a class="code" href="classhffix_1_1message__reader.html">hffix::message_reader</a> r(w.<a class="code" href="classhffix_1_1message__writer.html#a576e4341f730af0bb2d9e9eb4b122ccb">message_begin</a>(), w.<a class="code" href="classhffix_1_1message__writer.html#a364e1c6af2d0d82f908ece1ae246b2eb">message_end</a>());</div></div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01576">1576</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01718">1718</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a8c76cd4d21c2c493b4cfd9215d233227"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c76cd4d21c2c493b4cfd9215d233227">&#9670;&nbsp;</a></span>message_reader() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">hffix::message_reader::message_reader </td>
+          <td>(</td>
+          <td class="paramtype">const char(&amp;)&#160;</td>
+          <td class="paramname"><em>buffer</em>[N]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct on an array reference to a buffer. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">N</td><td>The size of the array. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>An array reference. The reader will read from the entire array of length <em>N</em>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01734">1734</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -326,7 +374,7 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01655">1655</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01812">1812</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -356,7 +404,7 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <p>A pointer to the begining of the buffer. </p>
 <p><a class="el" href="classhffix_1_1message__reader.html#a4d9d5f7faa97bfb545cda6e16d45eef7" title="A pointer to the begining of the buffer. ">buffer_begin()</a> == <a class="el" href="classhffix_1_1message__reader.html#ac40460fefa32cb65c4f844e087f46df4" title="A pointer to the beginning of the FIX message in the buffer. ">message_begin()</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01746">1746</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01903">1903</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -391,7 +439,7 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01685">1685</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01842">1842</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -426,7 +474,7 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01665">1665</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01822">1822</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -475,7 +523,7 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if a field was found, and <code>i</code> was modified to point to the found field.</dd></dl>
 <p>Example usage: </p><div class="fragment"><div class="line"><a class="code" href="classhffix_1_1message__reader__const__iterator.html">hffix::message_reader::const_iterator</a> i = reader.begin();</div><div class="line"></div><div class="line"><span class="keywordflow">if</span> (reader.find_with_hint(<a class="code" href="namespacehffix_1_1tag.html#a66ea8cc10760e55c6f323a7edfe3487bab32e2b61a6da369187ba759ef12e1fa3">MsgSeqNum</a>, i))</div><div class="line">  <span class="keywordtype">int</span> seqnum = i++-&gt;as_int&lt;int&gt;();</div><div class="line"></div><div class="line"><span class="keywordflow">if</span> (reader.find_with_hint(<a class="code" href="namespacehffix_1_1tag.html#a66ea8cc10760e55c6f323a7edfe3487baaf9503fa60ec34d2bafd7444eff6c42c">TargetCompID</a>, i))</div><div class="line">  std::string targetcompid = i++-&gt;as_string();</div></div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01732">1732</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01889">1889</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -512,7 +560,7 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <p><em>fix-42_with_errata_20010501.pdf</em> p.17: "Valid FIX Message is a message that is properly formed according to this specification and contains a
 valid body length and checksum field" </p>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01614">1614</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01771">1771</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -548,7 +596,7 @@ valid body length and checksum field" </p>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01770">1770</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01927">1927</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -583,7 +631,7 @@ valid body length and checksum field" </p>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01777">1777</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01934">1934</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -618,7 +666,7 @@ valid body length and checksum field" </p>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01786">1786</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01943">1943</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -653,7 +701,7 @@ valid body length and checksum field" </p>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01675">1675</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01832">1832</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -690,7 +738,7 @@ valid body length and checksum field" </p>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01631">1631</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01788">1788</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>

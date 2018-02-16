@@ -64,6 +64,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a92249e80f23ec4b7830fa047cdb0e229"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__writer.html#a92249e80f23ec4b7830fa047cdb0e229">message_writer</a> (char *begin, char *end)</td></tr>
 <tr class="memdesc:a92249e80f23ec4b7830fa047cdb0e229"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct by buffer begin and end.  <a href="#a92249e80f23ec4b7830fa047cdb0e229">More...</a><br /></td></tr>
 <tr class="separator:a92249e80f23ec4b7830fa047cdb0e229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aa93cdde7e92f8e2e0b4cbdedd2ebcf"><td class="memTemplParams" colspan="2">template&lt;size_t N&gt; </td></tr>
+<tr class="memitem:a9aa93cdde7e92f8e2e0b4cbdedd2ebcf"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__writer.html#a9aa93cdde7e92f8e2e0b4cbdedd2ebcf">message_writer</a> (char(&amp;buffer)[N])</td></tr>
+<tr class="memdesc:a9aa93cdde7e92f8e2e0b4cbdedd2ebcf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct on an array reference to a buffer.  <a href="#a9aa93cdde7e92f8e2e0b4cbdedd2ebcf">More...</a><br /></td></tr>
+<tr class="separator:a9aa93cdde7e92f8e2e0b4cbdedd2ebcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0e511d86663196185a94534eec86989"><td class="memItemLeft" align="right" valign="top"><a id="ac0e511d86663196185a94534eec86989"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__writer.html#ac0e511d86663196185a94534eec86989">~message_writer</a> ()</td></tr>
 <tr class="memdesc:ac0e511d86663196185a94534eec86989"><td class="mdescLeft">&#160;</td><td class="mdescRight">Owns no resources, so destruction is no-op. <br /></td></tr>
@@ -78,6 +82,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a364e1c6af2d0d82f908ece1ae246b2eb"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__writer.html#a364e1c6af2d0d82f908ece1ae246b2eb">message_end</a> () const</td></tr>
 <tr class="memdesc:a364e1c6af2d0d82f908ece1ae246b2eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to past-the-end of the message.  <a href="#a364e1c6af2d0d82f908ece1ae246b2eb">More...</a><br /></td></tr>
 <tr class="separator:a364e1c6af2d0d82f908ece1ae246b2eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a393059ba4df90feffe19837f5be8eb49"><td class="memItemLeft" align="right" valign="top"><a id="a393059ba4df90feffe19837f5be8eb49"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__writer.html#a393059ba4df90feffe19837f5be8eb49">buffer_size</a> () const</td></tr>
+<tr class="memdesc:a393059ba4df90feffe19837f5be8eb49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Total available buffer size, including buffer already written to by this message. <br /></td></tr>
+<tr class="separator:a393059ba4df90feffe19837f5be8eb49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b3756d1528b95bfde9f208eb4e222db"><td class="memItemLeft" align="right" valign="top"><a id="a3b3756d1528b95bfde9f208eb4e222db"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__writer.html#a3b3756d1528b95bfde9f208eb4e222db">buffer_size_remaining</a> () const</td></tr>
+<tr class="memdesc:a3b3756d1528b95bfde9f208eb4e222db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remaining available buffer size. Excludes buffer already written to by this message. <br /></td></tr>
+<tr class="separator:a3b3756d1528b95bfde9f208eb4e222db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Transport Fields</div></td></tr>
 <tr class="memitem:a2051ac234e079883d444e5e88551d74f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1message__writer.html#a2051ac234e079883d444e5e88551d74f">push_back_header</a> (char const *begin_string_version)</td></tr>
 <tr class="memdesc:a2051ac234e079883d444e5e88551d74f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the <em>BeginString</em> and <em>BodyLength</em> fields to the buffer.  <a href="#a2051ac234e079883d444e5e88551d74f">More...</a><br /></td></tr>
@@ -152,10 +164,10 @@ Public Member Functions</h2></td></tr>
 <p>The <a class="el" href="classhffix_1_1message__writer.html#a2051ac234e079883d444e5e88551d74f" title="Write the BeginString and BodyLength fields to the buffer. ">push_back_header()</a> method will write the <em>BeginString</em> and <em>BodyLength</em> fields to the message, but the FIX Standard Message Header requires also <em>MsgType</em>, <em>SenderCompID</em>, <em>TargetCompID</em>, <em>MsgSeqNum</em> and <em>SendingTime</em>. You must write those fields yourself, starting with <em>MsgType</em>.</p>
 <p>After calling all other push_back methods and before sending the message, you must call <a class="el" href="classhffix_1_1message__writer.html#a525795ff86e68c8727dc48db7877745e" title="Write the CheckSum field to the buffer. ">push_back_trailer()</a>, which will write the CheckSum field for you. </p>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00348">348</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00364">364</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afd8ccc7e4c114fbfcfc2fff341bf08f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd8ccc7e4c114fbfcfc2fff341bf08f0">&#9670;&nbsp;</a></span>message_writer() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afd8ccc7e4c114fbfcfc2fff341bf08f0">&#9670;&nbsp;</a></span>message_writer() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -197,12 +209,12 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00356">356</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00372">372</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
 <a id="a92249e80f23ec4b7830fa047cdb0e229"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92249e80f23ec4b7830fa047cdb0e229">&#9670;&nbsp;</a></span>message_writer() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a92249e80f23ec4b7830fa047cdb0e229">&#9670;&nbsp;</a></span>message_writer() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -244,7 +256,51 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00367">367</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00384">384</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a9aa93cdde7e92f8e2e0b4cbdedd2ebcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aa93cdde7e92f8e2e0b4cbdedd2ebcf">&#9670;&nbsp;</a></span>message_writer() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;size_t N&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">hffix::message_writer::message_writer </td>
+          <td>(</td>
+          <td class="paramtype">char(&amp;)&#160;</td>
+          <td class="paramname"><em>buffer</em>[N]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct on an array reference to a buffer. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">N</td><td>The size of the array. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>An array reference. The writer will write into the entire array of length <em>N</em>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00397">397</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -275,7 +331,7 @@ Public Member Functions</h2></td></tr>
 <p>Pointer to beginning of the message. </p>
 <dl class="section pre"><dt>Precondition</dt><dd>None. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00396">396</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00427">427</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -305,7 +361,7 @@ Public Member Functions</h2></td></tr>
 <p>Pointer to past-the-end of the message. </p>
 <dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classhffix_1_1message__writer.html#a525795ff86e68c8727dc48db7877745e" title="Write the CheckSum field to the buffer. ">push_back_trailer()</a> has been called. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00404">404</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00435">435</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -335,7 +391,7 @@ Public Member Functions</h2></td></tr>
 <p>Size of the message in bytes. </p>
 <dl class="section pre"><dt>Precondition</dt><dd><a class="el" href="classhffix_1_1message__writer.html#a525795ff86e68c8727dc48db7877745e" title="Write the CheckSum field to the buffer. ">push_back_trailer()</a> has been called. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00387">387</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00418">418</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -377,12 +433,18 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tag</td><td>FIX tag. </td></tr>
-    <tr><td class="paramname">character</td><td>An ascii character. </td></tr>
+    <tr><td class="paramname">character</td><td>An ascii character.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>When the remaining buffer size is too small. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00545">545</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00624">624</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -440,12 +502,18 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">tag_data_length</td><td>FIX tag for the data length field. </td></tr>
     <tr><td class="paramname">tag_data</td><td>FIX tag for the data field. </td></tr>
     <tr><td class="paramname">begin</td><td>Pointer to the beginning of the data. </td></tr>
-    <tr><td class="paramname">end</td><td>Pointer to after-the-end of the data. </td></tr>
+    <tr><td class="paramname">end</td><td>Pointer to after-the-end of the data.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>When the remaining buffer size is too small. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00858">858</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00993">993</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -501,12 +569,18 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">tag</td><td>FIX tag. </td></tr>
     <tr><td class="paramname">year</td><td>Year. </td></tr>
     <tr><td class="paramname">month</td><td>Month. </td></tr>
-    <tr><td class="paramname">day</td><td>Day. </td></tr>
+    <tr><td class="paramname">day</td><td>Day.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>When the remaining buffer size is too small. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00606">606</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00700">700</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -548,13 +622,19 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tag</td><td>FIX tag. </td></tr>
-    <tr><td class="paramname">date</td><td>Date. </td></tr>
+    <tr><td class="paramname">date</td><td>Date.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>When the remaining buffer size is too small.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd>HFFIX_NO_BOOST_DATETIME </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00775">775</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00902">902</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -613,12 +693,18 @@ template&lt;typename Int_type &gt; </div>
   <table class="params">
     <tr><td class="paramname">tag</td><td>FIX tag. </td></tr>
     <tr><td class="paramname">mantissa</td><td>The mantissa of the decimal float. </td></tr>
-    <tr><td class="paramname">exponent</td><td>The exponent of the decimal float. Must be less than or equal to zero. </td></tr>
+    <tr><td class="paramname">exponent</td><td>The exponent of the decimal float. Must be less than or equal to zero.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>When the remaining buffer size is too small. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00587">587</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00676">676</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -651,12 +737,19 @@ template&lt;typename Int_type &gt; </div>
 <dl class="section pre"><dt>Precondition</dt><dd>No other <code>push_back</code> method has yet been called. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">begin_string_version</td><td>The value for the BeginString FIX field. Should probably be "FIX.4.2" or "FIX.4.3" or "FIX.4.4" or "FIXT.1.1" (for FIX 5.0). </td></tr>
+    <tr><td class="paramname">begin_string_version</td><td>The value for the BeginString FIX field. Should probably be "FIX.4.2" or "FIX.4.3" or "FIX.4.4" or "FIXT.1.1" (for FIX 5.0).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>When the remaining buffer size is too small. </td></tr>
+    <tr><td class="paramname">std::logic_error</td><td>When called more than once for a single message. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00421">421</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00469">469</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -706,12 +799,18 @@ template&lt;typename Int_type &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tag</td><td>FIX tag. </td></tr>
-    <tr><td class="paramname">number</td><td>Integer value. </td></tr>
+    <tr><td class="paramname">number</td><td>Integer value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>When the remaining buffer size is too small. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00562">562</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00647">647</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -760,12 +859,18 @@ template&lt;typename Int_type &gt; </div>
   <table class="params">
     <tr><td class="paramname">tag</td><td>FIX tag. </td></tr>
     <tr><td class="paramname">year</td><td>Year. </td></tr>
-    <tr><td class="paramname">month</td><td>Month. </td></tr>
+    <tr><td class="paramname">month</td><td>Month.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>When the remaining buffer size is too small. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00623">623</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00723">723</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -814,12 +919,18 @@ template&lt;typename Int_type &gt; </div>
   <table class="params">
     <tr><td class="paramname">tag</td><td>FIX tag. </td></tr>
     <tr><td class="paramname">begin</td><td>Pointer to the beginning of the string. </td></tr>
-    <tr><td class="paramname">end</td><td>Pointer to past-the-end of the string. </td></tr>
+    <tr><td class="paramname">end</td><td>Pointer to past-the-end of the string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>When the remaining buffer size is too small. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00492">492</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00557">557</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -861,12 +972,18 @@ template&lt;typename Int_type &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tag</td><td>FIX tag. </td></tr>
-    <tr><td class="paramname">cstring</td><td>Pointer to the beginning of a C-style null-terminated string. </td></tr>
+    <tr><td class="paramname">cstring</td><td>Pointer to the beginning of a C-style null-terminated string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>When the remaining buffer size is too small. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00505">505</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00576">576</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -909,12 +1026,18 @@ template&lt;typename Int_type &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tag</td><td>FIX tag. </td></tr>
-    <tr><td class="paramname">s</td><td>String. </td></tr>
+    <tr><td class="paramname">s</td><td>String.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>When the remaining buffer size is too small. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00521">521</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00595">595</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -957,12 +1080,18 @@ template&lt;typename Int_type &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tag</td><td>FIX tag. </td></tr>
-    <tr><td class="paramname">s</td><td>String. </td></tr>
+    <tr><td class="paramname">s</td><td>String.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>When the remaining buffer size is too small. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00535">535</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00611">611</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -1020,12 +1149,18 @@ template&lt;typename Int_type &gt; </div>
     <tr><td class="paramname">tag</td><td>FIX tag. </td></tr>
     <tr><td class="paramname">hour</td><td>Hour. </td></tr>
     <tr><td class="paramname">minute</td><td>Minute. </td></tr>
-    <tr><td class="paramname">second</td><td>Second. </td></tr>
+    <tr><td class="paramname">second</td><td>Second.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>When the remaining buffer size is too small. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00645">645</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00750">750</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -1089,12 +1224,18 @@ template&lt;typename Int_type &gt; </div>
     <tr><td class="paramname">hour</td><td>Hour. </td></tr>
     <tr><td class="paramname">minute</td><td>Minute. </td></tr>
     <tr><td class="paramname">second</td><td>Second. </td></tr>
-    <tr><td class="paramname">millisecond</td><td>Millisecond. </td></tr>
+    <tr><td class="paramname">millisecond</td><td>Millisecond.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>When the remaining buffer size is too small. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00670">670</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00780">780</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -1138,13 +1279,19 @@ template&lt;typename Int_type &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tag</td><td>FIX tag. </td></tr>
-    <tr><td class="paramname">timeonly</td><td>Time. </td></tr>
+    <tr><td class="paramname">timeonly</td><td>Time.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>When the remaining buffer size is too small.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd>HFFIX_NO_BOOST_DATETIME </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00791">791</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00921">921</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -1223,12 +1370,18 @@ template&lt;typename Int_type &gt; </div>
     <tr><td class="paramname">day</td><td>Day. </td></tr>
     <tr><td class="paramname">hour</td><td>Hour. </td></tr>
     <tr><td class="paramname">minute</td><td>Minute. </td></tr>
-    <tr><td class="paramname">second</td><td>Second. </td></tr>
+    <tr><td class="paramname">second</td><td>Second.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>When the remaining buffer size is too small. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00702">702</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00817">817</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -1313,12 +1466,18 @@ template&lt;typename Int_type &gt; </div>
     <tr><td class="paramname">hour</td><td>Hour. </td></tr>
     <tr><td class="paramname">minute</td><td>Minute. </td></tr>
     <tr><td class="paramname">second</td><td>Second. </td></tr>
-    <tr><td class="paramname">millisecond</td><td>Millisecond. </td></tr>
+    <tr><td class="paramname">millisecond</td><td>Millisecond.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>When the remaining buffer size is too small. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00737">737</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00858">858</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -1362,13 +1521,19 @@ template&lt;typename Int_type &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">tag</td><td>FIX tag. </td></tr>
-    <tr><td class="paramname">timestamp</td><td>Date and time. </td></tr>
+    <tr><td class="paramname">timestamp</td><td>Date and time.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>When the remaining buffer size is too small.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd>HFFIX_NO_BOOST_DATETIME </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00813">813</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00946">946</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -1402,12 +1567,19 @@ template&lt;typename Int_type &gt; </div>
 <dl class="section post"><dt>Postcondition</dt><dd>There is a complete and valid FIX message in the buffer.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">calculate_checksum</td><td>If this flag is set to false, then instead of iterating over the entire message and calculating the CheckSum, the standard trailer will simply write CheckSum=000. This is fine if you're sending the message to a FIX parser that, like High Frequency FIX Parser, doesn't care about the CheckSum. </td></tr>
+    <tr><td class="paramname">calculate_checksum</td><td>If this flag is set to false, then instead of iterating over the entire message and calculating the CheckSum, the standard trailer will simply write CheckSum=000. This is fine if you're sending the message to a FIX parser that, like High Frequency FIX Parser, doesn't care about the CheckSum.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::out_of_range</td><td>When the remaining buffer size is too small. </td></tr>
+    <tr><td class="paramname">std::logic_error</td><td>When called before <a class="el" href="classhffix_1_1message__writer.html#a2051ac234e079883d444e5e88551d74f" title="Write the BeginString and BodyLength fields to the buffer. ">message_writer::push_back_header()</a> </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00448">448</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l00503">503</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
