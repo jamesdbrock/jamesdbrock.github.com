@@ -46,11 +46,11 @@ $(function() {
 <div class="textblock"><p><a href="https://travis-ci.org/jamesdbrock/hffix"></a></p>
 <h2>Introduction</h2>
 <p>The High Frequency FIX Parser library is an open source implementation of <a href="http://www.fixtradingcommunity.org/pg/structure/tech-specs/fix-protocol">Financial Information Exchange protocol versions 4.2, 4.3, 4.4, and 5.0 SP2.</a> intended for use by developers of high frequency, low latency financial software. The purpose of the library is to do fast, efficient encoding and decoding of FIX in place, at the location of the I/O buffer. The library does not use intermediate message objects, and it does <b>no memory allocation</b> on the free store (the “heap”).</p>
-<p>Hffix library is not certified by any industry-leading committees. It is not an “engine.” It is not an “adaptor.” It has no threading, no I/O, no object-oriented inheritance. It is just a superfast parser and serializer in plain modern generic-iterator-style C++98.</p>
+<p><em>hffix</em> library is not certified by any industry-leading committees. It is not an “engine.” It is not an “adaptor.” It has no threading, no I/O, no object-oriented subtyping. It is just a superfast parser and serializer in plain modern generic-iterator-style C++98.</p>
 <h2>Hello, FIX! Quick Start</h2>
 <p>The main repository is at <a href="https://github.com/jamesdbrock/hffix">https://github.com/jamesdbrock/hffix</a></p>
 <h3>fixprint</h3>
-<p>To see an example of the library in action, enter these four commands at your shell prompt. This example uses the <code>fixprint</code> utility which comes with the hffix library. The result will be a colorized and pretty-printed FIX 5.0 test data set. </p><pre class="fragment">git clone https://github.com/jamesdbrock/hffix.git
+<p>To see an example of the library in action, enter these four commands at your shell prompt. This example uses the <code>fixprint</code> utility which comes with the <em>hffix</em> library. The result will be a colorized and pretty-printed FIX 5.0 test data set. </p><pre class="fragment">git clone https://github.com/jamesdbrock/hffix.git
 cd hffix
 make fixprint
 util/bin/fixprint --color &lt; test/data/fix.5.0.set.2 | less -R
@@ -102,7 +102,7 @@ xdg-open doc/html/index.html
 <p>FIX has transport-layer features mixed in with the messages, and most FIX hosts have various quirks in the way they employ the administrative messages. To manage a FIX session your application will need to match the the transport-layer and administrative features of the other FIX host. High Frequency FIX Parser has the flexibility to express any subset or proprietary superset of FIX.</p>
 <p>Consult <a href="http://www.fixtradingcommunity.org/pg/file/fplpo/read/30489/fix-sessionlevel-test-cases-and-expected-behaviors">FIX Session-level Test Cases and Expected Behaviors</a></p>
 <h3>Numerics</h3>
-<p>No native floating-point numeric types (<code>double</code>, <code>float</code>) are employed by the library. ASCII-encoded decimal numbers are represented by integral mantissa and exponent. See <a class="el" href="classhffix_1_1message__writer.html#adc62f5b1fd0193b999d1ddf84ebf4cf1" title="Append a decimal float field to the message. ">hffix::message_writer::push_back_decimal()</a> and <a class="el" href="classhffix_1_1field__value.html#a9ab721a634c9842c171591a8fec9488d" title="Ascii-to-decimal conversion. ">hffix::field_value::as_decimal()</a>. As with every FIX data type, the High Frequency FIX library user has the option to serialize and deserialize numeric fields themself rather than use these methods.</p>
+<p>No native floating-point numeric types (<code>double</code>, <code>float</code>) are employed by the library. ASCII-encoded decimal numbers are represented by integral mantissa and exponent. See <code><a class="el" href="classhffix_1_1message__writer.html#adc62f5b1fd0193b999d1ddf84ebf4cf1" title="Append a decimal float field to the message. ">hffix::message_writer::push_back_decimal()</a></code> and <code><a class="el" href="classhffix_1_1field__value.html#a9ab721a634c9842c171591a8fec9488d" title="Ascii-to-decimal conversion. ">hffix::field_value::as_decimal()</a></code>. As with every FIX data type, the High Frequency FIX library user has the option to serialize and deserialize numeric fields themself rather than use these methods.</p>
 <h3>Encryption</h3>
 <p>High Frequency FIX Parser supports the binary data field types such as <em>SecureData</em>, but it does not implement any of the <em>EncryptMethods</em> suggested by the FIX specifications. If you want to encrypt or decrypt some data you'll have to do the encryption or decryption yourself.</p>
 <h3>CheckSum</h3>
@@ -112,7 +112,7 @@ xdg-open doc/html/index.html
 <h3>Administrative Messages</h3>
 <p>The administrative messages <em>Logon</em>, <em>Logout</em>, <em>ResendRequest</em>, <em>Heartbeat</em>, <em>TestRequest</em>, <em>SeqReset-Reset</em> and <em>SeqReset-GapFill</em> don't get special treatment in High Frequency FIX Parser. Any administrative message can be encoded or decoded like any other message.</p>
 <h3>User-Defined Fields and Custom Tags</h3>
-<p>High Frequency FIX Parser does not enforce the data type of the Field Definitions for content fields in the FIX spec, so the developer is free to read or write any tag number with any field data type.</p>
+<p>High Frequency FIX Parser does not enforce the data type of the Field Definitions for content fields in the FIX spec, so the developer is free to read or write any tag number with any field data type. See <code><a class="el" href="classhffix_1_1message__writer.html" title="One FIX message for writing. ">hffix::message_writer</a></code> and <code><a class="el" href="classhffix_1_1field__value.html" title="FIX field value for hffix::message_reader. ">hffix::field_value</a></code> documentation under Extension for details.</p>
 <h2>Using High Frequency FIX Parser</h2>
 <h3>Writing a Message Example</h3>
 <p>This example program is in the <em>hffix</em> repository at <code>test/src/writer01.cpp</code>.</p>
