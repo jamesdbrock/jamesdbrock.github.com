@@ -75,7 +75,7 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">One FIX message for writing.  <a href="classhffix_1_1message__writer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structhffix_1_1tag__equal.html">tag_equal</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A predicate closed with a FIX tag which returns true if the tag of the <a class="el" href="classhffix_1_1field.html" title="A FIX field for hffix::message_reader, with tag and hffix::field_value. ">hffix::field</a> passed to the predicate is equal.  <a href="structhffix_1_1tag__equal.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A predicate constructed with a FIX tag which returns true if the tag of the <a class="el" href="classhffix_1_1field.html" title="A FIX field for hffix::message_reader, with tag and hffix::field_value. ">hffix::field</a> passed to the predicate is equal.  <a href="structhffix_1_1tag__equal.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -126,7 +126,7 @@ template&lt;typename AssociativeContainer &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix__fields_8hpp_source.html#l01440">1440</a> of file <a class="el" href="hffix__fields_8hpp_source.html">hffix_fields.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix__fields_8hpp_source.html#l07926">7926</a> of file <a class="el" href="hffix__fields_8hpp_source.html">hffix_fields.hpp</a>.</p>
 
 </div>
 </div>
@@ -156,7 +156,7 @@ template&lt;typename AssociativeContainer &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix__fields_8hpp_source.html#l02834">2834</a> of file <a class="el" href="hffix__fields_8hpp_source.html">hffix_fields.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix__fields_8hpp_source.html#l13701">13701</a> of file <a class="el" href="hffix__fields_8hpp_source.html">hffix_fields.hpp</a>.</p>
 
 </div>
 </div>
@@ -197,7 +197,7 @@ template&lt;typename AssociativeContainer &gt; </div>
 <p>Given a field tag number and a field name dictionary, returns a type which provides <code>operator&lt;&lt;</code> to write the name of the field to an <code>std::ostream</code>. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">AssociativeContainer</td><td>The type of the field name dictionary. Must satisfy concept <code>AssociativeContainer&lt;int, std::string&gt;</code>, for example <code>std::map&lt;int, std::string&gt;</code> or <code>std::unordered_map&lt;int, std::string&gt;</code>. See <a href="http://en.cppreference.com/w/cpp/concept/AssociativeContainer">http://en.cppreference.com/w/cpp/concept/AssociativeContainer</a></td></tr>
+    <tr><td class="paramname">AssociativeContainer</td><td>The type of the field name dictionary. Must satisfy concept <code>AssociativeContainer&lt;int, std::string&gt;</code>, for example <code>std::map&lt;int, std::string&gt;</code> or <code>std::unordered_map&lt;int, std::string&gt;</code>. See <a href="https://en.cppreference.com/w/cpp/named_req/AssociativeContainer">https://en.cppreference.com/w/cpp/named_req/AssociativeContainer</a></td></tr>
   </table>
   </dd>
 </dl>
@@ -210,7 +210,7 @@ template&lt;typename AssociativeContainer &gt; </div>
   </dd>
 </dl>
 <p>Example usage: </p><div class="fragment"><div class="line">std::map&lt;int, std::string&gt; dictionary;</div><div class="line"><a class="code" href="namespacehffix.html#a7a9146dc05a357c892cb03ee878463aa">hffix::dictionary_init_field</a>(dictionary);</div><div class="line">std::cout &lt;&lt; <a class="code" href="namespacehffix.html#a1cee7e096a9773f5e21c551dc861a8ad">hffix::field_name</a>(<a class="code" href="namespacehffix_1_1tag.html#a66ea8cc10760e55c6f323a7edfe3487baa745e1759f1ef78abff6585521b21159">hffix::tag::SenderCompID</a>, dictionary) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>; <span class="comment">// Will print &quot;SenderCompID\n&quot;.</span></div><div class="line">std::cout &lt;&lt; <a class="code" href="namespacehffix.html#a1cee7e096a9773f5e21c551dc861a8ad">hffix::field_name</a>(1000000, dictionary) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;                  <span class="comment">// Unknown field tag, will print &quot;1000000\n&quot;.</span></div><div class="line">std::cout &lt;&lt; <a class="code" href="namespacehffix.html#a1cee7e096a9773f5e21c551dc861a8ad">hffix::field_name</a>(1000000, dictionary, <span class="keyword">false</span>) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span>;           <span class="comment">// Unknown field tag, will print &quot;\n&quot;.</span></div></div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l02428">2428</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l02449">2449</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
