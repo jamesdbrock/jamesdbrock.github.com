@@ -74,6 +74,9 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cl
 <tr class="memitem:a53b48b280f0a9e034a08873a1a0d8f5f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1field__value.html#a53b48b280f0a9e034a08873a1a0d8f5f">as_string</a> () const</td></tr>
 <tr class="memdesc:a53b48b280f0a9e034a08873a1a0d8f5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ascii value as std::string.  <a href="classhffix_1_1field__value.html#a53b48b280f0a9e034a08873a1a0d8f5f">More...</a><br /></td></tr>
 <tr class="separator:a53b48b280f0a9e034a08873a1a0d8f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10c655add0f944ec14afd52499e112f7"><td class="memItemLeft" align="right" valign="top">std::string_view&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1field__value.html#a10c655add0f944ec14afd52499e112f7">as_string_view</a> () const</td></tr>
+<tr class="memdesc:a10c655add0f944ec14afd52499e112f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ascii value as std::string_view.  <a href="classhffix_1_1field__value.html#a10c655add0f944ec14afd52499e112f7">More...</a><br /></td></tr>
+<tr class="separator:a10c655add0f944ec14afd52499e112f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b1bde2648c8758a4db948c486d639a6"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhffix_1_1field__value.html#a5b1bde2648c8758a4db948c486d639a6">as_char</a> () const</td></tr>
 <tr class="memdesc:a5b1bde2648c8758a4db948c486d639a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ascii value as char.  <a href="classhffix_1_1field__value.html#a5b1bde2648c8758a4db948c486d639a6">More...</a><br /></td></tr>
 <tr class="separator:a5b1bde2648c8758a4db948c486d639a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,7 +156,7 @@ std::chrono Date and Time Conversion Methods</h2></td></tr>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> i = v.as_int();</div>
 <div class="line"><span class="keywordtype">int</span> i = boost::lexical_cast&lt;int&gt;(v.begin(), v.size());</div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01547">1547</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01575">1575</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5b1bde2648c8758a4db948c486d639a6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5b1bde2648c8758a4db948c486d639a6">&#9670;&nbsp;</a></span>as_char()</h2>
@@ -181,7 +184,7 @@ std::chrono Date and Time Conversion Methods</h2></td></tr>
 <p>Ascii value as char. </p>
 <dl class="section return"><dt>Returns</dt><dd>The first char of the ascii value of the field. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01680">1680</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01719">1719</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -212,7 +215,7 @@ std::chrono Date and Time Conversion Methods</h2></td></tr>
 <p>Parses ascii and returns a LocalMktDate or UTCDate.</p>
 <dl class="section return"><dt>Returns</dt><dd>Date if parsing was successful, else <code>boost::posix_time::not_a_date_time</code>. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01899">1899</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01938">1938</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -268,7 +271,7 @@ std::chrono Date and Time Conversion Methods</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if successful and the out arguments were set. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01758">1758</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01797">1797</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -325,7 +328,7 @@ template&lt;typename Int_type &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01702">1702</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01741">1741</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -364,7 +367,7 @@ template&lt;typename Int_type &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The ascii field value represented as an integer of type Int_type. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01739">1739</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01778">1778</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -413,7 +416,7 @@ template&lt;typename Int_type &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if successful and the out arguments were set. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01776">1776</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01815">1815</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -450,7 +453,37 @@ template&lt;typename Int_type &gt; </div>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01671">1671</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01699">1699</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+
+</div>
+</div>
+<a id="a10c655add0f944ec14afd52499e112f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10c655add0f944ec14afd52499e112f7">&#9670;&nbsp;</a></span>as_string_view()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string_view hffix::field_value::as_string_view </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ascii value as std::string_view. </p>
+<dl class="section return"><dt>Returns</dt><dd>An std::string_view that contains the ascii value of the field. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01709">1709</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -481,7 +514,7 @@ template&lt;typename Int_type &gt; </div>
 <p>Parses ascii and returns a time.</p>
 <dl class="section return"><dt>Returns</dt><dd>Time if parsing was successful, else boost::posix_time::not_a_date_time. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01918">1918</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01957">1957</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -544,7 +577,7 @@ template&lt;typename Int_type &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if successful and the out arguments were set. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01800">1800</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01839">1839</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -584,7 +617,7 @@ template&lt;typename Rep , typename Period &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if parsing was successful and the return value was set, else False. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l02058">2058</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l02097">2097</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -615,7 +648,7 @@ template&lt;typename Rep , typename Period &gt; </div>
 <p>Parses ascii and returns a time.</p>
 <dl class="section return"><dt>Returns</dt><dd>Time if parsing was successful, else boost::posix_time::not_a_date_time. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01937">1937</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01976">1976</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -678,7 +711,7 @@ template&lt;typename Rep , typename Period &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if successful and the out arguments were set. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01820">1820</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01859">1859</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -718,7 +751,7 @@ template&lt;typename Rep , typename Period &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if parsing was successful and the return value was set, else False. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l02082">2082</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l02121">2121</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -749,7 +782,7 @@ template&lt;typename Rep , typename Period &gt; </div>
 <p>Parses ascii and returns a timestamp with millisecond precision.</p>
 <dl class="section return"><dt>Returns</dt><dd>Date and Time if parsing was successful, else boost::posix_time::not_a_date_time. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01956">1956</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01995">1995</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -833,7 +866,7 @@ template&lt;typename Rep , typename Period &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if successful and the out arguments were set. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01843">1843</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01882">1882</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -874,7 +907,7 @@ template&lt;typename Clock , typename Duration &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if parsing was successful and <code>tp</code> was set, else False. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l02019">2019</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l02058">2058</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -905,7 +938,7 @@ template&lt;typename Clock , typename Duration &gt; </div>
 <p>Parses ascii and returns a timestamp with nanosecond precision.</p>
 <dl class="section return"><dt>Returns</dt><dd>Date and Time if parsing was successful, else boost::posix_time::not_a_date_time. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01980">1980</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l02019">2019</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -989,7 +1022,7 @@ template&lt;typename Clock , typename Duration &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if successful and the out arguments were set. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01871">1871</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l01910">1910</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
@@ -1030,7 +1063,7 @@ template&lt;typename Clock , typename Duration &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True if parsing was successful and <code>tp</code> was set, else False. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l02040">2040</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="hffix_8hpp_source.html#l02079">2079</a> of file <a class="el" href="hffix_8hpp_source.html">hffix.hpp</a>.</p>
 
 </div>
 </div>
