@@ -481,8 +481,16 @@ test/bin/writer01 | util/bin/fixprint --color
 <p><code>make test</code> to run the test suite.</p>
 <p><code>make doc</code> to build the documentation.</p>
 <h2>Nix</h2>
-<p>The file <code>flake.nix</code> declares a <em>Nix</em> shell development environment which provides all dependencies for every target in the <code>Makefile</code>, including <em>Doxygen</em>. Enter the <em>Nix</em> shell by <a href="https://nixos.org/download.html">installing <em>Nix</em></a> and then running <code>nix develop</code> in this directory. From the <code>nix develop</code> prompt, you will be able to build all <code>Makefile</code> targets.</p>
-<h2>Pull Requests</h2>
+<p>We have a <code>flake.nix</code>.</p>
+<div class="fragment"><div class="line">nix flake show github:jamesdbrock/hffix</div>
+</div><!-- fragment --><h3>Development</h3>
+<p>The <code>flake.nix</code> declares a <em>Nix</em> shell development environment which provides all dependencies for every target in the <code>Makefile</code>, including <em>Doxygen</em>. Enter the <em>Nix</em> shell by <a href="https://nixos.org/download.html">installing <em>Nix</em></a> and then running <code>nix develop</code> in this directory. From the <code>nix develop</code> prompt, you will be able to build all <code>Makefile</code> targets.</p>
+<h3>Package</h3>
+<p>The <em>Nix</em> <code>hffix</code> package will provide the <code>hffix</code> C++ library.</p>
+<h3>Apps</h3>
+<p>Run the <code>fixprint</code> utility:</p>
+<div class="fragment"><div class="line">nix run github:jamesdbrock/hffix#fixprint</div>
+</div><!-- fragment --><h2>Pull Requests</h2>
 <p>Pull requests welcome!</p>
 <p>If you want to submit a bugfix pull request, then I would be grateful if you would break the pull request up into two commits:</p>
 <ol type="1">
@@ -502,6 +510,10 @@ test/bin/writer01 | util/bin/fixprint --color
 <h1>Change Log</h1>
 <table class="doxtable">
 <caption>Change Log</caption>
+<tr>
+<th>2024-04-18 </th><th>v1.4.1 </th><td><p class="starttd">Fix for <code>std::basic_string_view&lt;char&gt;::const_iterator</code> not being convertible to <code>const char *</code> in Windows (#56)  </p>
+<p class="endtd"></p>
+</td></tr>
 <tr>
 <th>2024-02-19 </th><th>v1.4.0 </th><td><p class="starttd"></p>
 <p class="intertd">Add <code><a class="el" href="classhffix_1_1message__writer.html#a2051ac234e079883d444e5e88551d74f" title="Write the BeginString and BodyLength fields to the buffer.">hffix::message_writer::push_back_header()</a></code> for <code>string_view</code>, and <code><a class="el" href="classhffix_1_1field__value.html#a10c655add0f944ec14afd52499e112f7" title="Ascii value as std::string_view.">hffix::field_value::as_string_view()</a></code> by <a href="https://github.com/skuzniar">Slawomir Kuzniar @skuzniar</a> (#51)</p>
