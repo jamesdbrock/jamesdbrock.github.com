@@ -38,6 +38,7 @@
 
     .institution {
     margin-left:2em;
+    margin-top:0.5em;
     font-style: italic;
     }
 
@@ -48,34 +49,26 @@
     margin-right:auto;
     }
 
-    .oldstints {
-    display:flex;
-    flex-direction:row;
+    #history table {
+    border-collapse:collapse;
     }
 
-    .stint {
-    display: flex;
-    flex-direction: row;
+    #history tr td {
     padding-bottom:1.5em;
     vertical-align:top;
     }
 
     .time {
     width:7em;
-    flex: none;
-    }
-
-    .oldstints .stint:not(:first-child) {
-    margin-left:3em;
     }
 
     .time .location {
     font-size:0.8em;
     margin-right:0.5em;
+    padding-top:0.4em;
     }
 
     .activity {
-      flex: auto;
     }
 
     .activity h3 {
@@ -93,7 +86,7 @@
 
     .activity p {
     margin-top:0.5em;
-    line-height:125%;
+    line-height:150%;
     margin-bottom:0;
     }
 
@@ -143,154 +136,122 @@
 
   </style>
   </head>
-  <body>
+  <body style='font-family:Noto Sans;'>
 
     <div class="contact">
     <div>
     <h1>James Dawson Brock</h1>
-    221-0804 Kanagawa-ken, Yokohama-shi, Kanagawa-ku, Kuritaya 14-1<br/>
-    ２２１－０８０４　神奈川県　横浜市　神奈川区　栗田谷　１４－１<br/>
+    221-0844 Kanagawa-ken, Yokohama, Kanagawa-ku, Sawatari 21-19, Green Maison #208</br>
+    <span style="font-family:Noto Sans Japanese;font-weight:500;">〒221-0844 神奈川県横浜市神奈川区沢渡21-19グリーンメゾン208</span><br/>
     <a href="mailto:James Brock &lt;jamesbrock@gmail.com&gt;">James Brock &lt;jamesbrock@gmail.com&gt;</a><br/>
-    <a href="tel:+81 080-5065-5783">+81 080-5065-5783</a><br/>
-    <a href="http://github.com/jamesdbrock">github.com/jamesdbrock</a><br/>
-    <a href="http://stackoverflow.com/users/187223/james-brock">stackoverflow.com/users/187223/james-brock</a><br/>
-    <a href="https://twitter.com/jamesdbrock">twitter.com/jamesdbrock</a><br/>
-    <a href="https://jamesdbrock.github.io/james-brock-resume.html">Résumé</a>
+    <a href="tel:08050655783">+81 (80) 5065-5783</a><br/>
+    <a href="https://github.com/jamesdbrock">github.com/jamesdbrock</a></br>
     </div>
     </div>
 
     <div id="history">
       <hr/>
+      <table>
 
-        <div class="stint">
-          <div class="time">
-            2019–Current<div class="location">Tokyo</div>
-          </div>
-          <div class="activity">
+        <tr>
+          <td class="time">
+            2019–now<div class="location">Tokyo</div>
+          </td>
+          <td class="activity">
             <h2>Senior Researcher</h2>
-            <div class="institution"><a href="https://www.cross-compass.com/en">Cross Compass LLC</a></div>
-            <p>Designed and implemented a visual programming environment
-            for machine learning networks.</p>
-            <p>Haskell ∙ Purescript</p>
-          </div>
-        </div>
-
-        <div class="stint">
-          <div class="time">
+            <div class="institution"><a href="https://www.cross-compass.com">Cross Compass Ltd.</a></div>
+            <p>Developed AI products for the Japanese manufacturing market.</p>
+            <p>Published <a href="https://github.com/pyedifice/pyedifice"><i>Edifice: Declarative GUI framework for Python and Qt</i></a></p>
+            <p>Published <a href="https://github.com/xc-jp/purescript-protobuf"><i>Google Protocol Buffers PureScript Plugin</i></a></p>
+            <p>Published Video <a href="https://www.youtube.com/watch?v=LLkbzt4ms6M"><i>Monadic Parsers at the Input Boundary</i></a></p>
+            <p>Haskell • PureScript • Python • C++ • NixOS</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="time">
             2015–2017<div class="location">Tokyo</div>
-          </div>
-          <div class="activity">
+          </td>
+          <td class="activity">
             <h2>Programmer</h2>
             <div class="institution"><a href="http://www.tsurucapital.com/en/">Tsuru Capital LLC</a></div>
-            <p>Researched and implemented statistical strategies for
-                equity index option trading. Developed and maintained
-                trading strategy and operations software.</p>
-            <p>Haskell</p>
-          </div>
-        </div>
+            <p>Researched and implemented strategies and operations for
+                equity index futures trading.</p>
+            <p>Haskell • Ubuntu</p>
+          </td>
+        </tr>
 
-        <div class="stint">
-          <div class="time">
+        <tr>
+          <td class="time">
             2012–2014<div class="location">Tokyo</div>
-          </div>
-          <div class="activity">
+          </td>
+          <td class="activity">
             <h2>Senior Software Engineer, R&amp;D Feeds</h2>
             <div class="institution"><a href="https://www.bloomberg.com/asia">Bloomberg L.P.</a></div>
-            <p>Developed software to collect current and historical market data from exchanges in Asia and the Middle East.</p>
-            <p>C++ ∙ Python</p>
-          </div>
-        </div>
+            <p>Developed market data feed software.</p>
+            <p>C++ • Python • RHEL • Solaris</p>
+          </td>
+        </tr>
 
-        <div class="stint">
-          <div class="time">
+        <tr>
+          <td class="time">
             2011–2012<div class="location">New York City</div>
-          </div>
-          <div class="activity">
+          </td>
+          <td class="activity">
             <h2>Chief Technology Officer</h2>
             <div class="institution"><a href="http://t3trading.com/">T3 Trading Group, LLC (formerly T3 Capital Management, LLC)</a></div>
             <p>In addition to Director of Algorithmic Trading duties,
                 certified technical compliance with FINRA regulations,
                 and assisted all departments with technical planning and hiring.
             </p>
-          </div>
-        </div>
+            <p>Published <a href="https://github.com/jamesdbrock/hffix"><i>High Frequency FIX</i></a></p>
+          </td>
+        </tr>
 
-        <div class="stint">
-          <div class="time">
+        <tr>
+          <td class="time">
             2005–2011<div class="location">New York City</div>
-          </div>
-          <div class="activity">
+          </td>
+          <td class="activity">
             <h2>Director of Algorithmic Trading</h2>
             <div class="institution">T3 Capital Management, LLC</div>
             <p>
-              Designed high-frequency statistical momentum equity trading strategies,
+              Designed high-frequency momentum equity trading strategies,
               built software architecture,
               supervised trading operations,
               performed regulatory compliance,
               hired and managed staff,
               provisioned hardware and services.
             </p>
-            <p>C++ ∙ C# </p>
-          </div>
-        </div>
+            <p>C++ • Boost • C# • SUSE • Windows</p>
+          </td>
+        </tr>
 
-        <hr/>
-
-        <div class="oldstints">
-        <div class="stint">
-          <div class="time">
-            2004–2005<div class="location">Dubai, U.A.E.</div>
-          </div>
-          <div class="activity">
-            <h2>Math Tutor</h2>
-            <div class="institution">Tutors International</div>
-          </div>
-        </div>
-
-        <div class="stint">
-          <div class="time">
-            2002–2004<div class="location">San Diego, California</div>
-          </div>
-          <div class="activity">
-            <h2>Programmer</h2>
-            <div class="institution">PINT Incorporated</div>
-          </div>
-        </div>
-
-        <div class="stint">
-          <div class="time">
-            1997–1999<div class="location">Providence, Rhode Island</div>
-          </div>
-          <div class="activity">
-            <h2>Programmer</h2>
-            <div class="institution">Brown University Planetary Geology Group</div>
-          </div>
-        </div>
-        </div>
-
+      </table>
       <hr/>
-
-        <div class="stint">
-          <div class="time">
+      <table>
+        <tr>
+          <td class="time">
             2001<div class="location">Providence, Rhode Island</div>
-          </div>
-          <div class="activity">
+          </td>
+          <td class="activity">
             <h2>Bachelor of Science, Applied Mathematics and Computer Science</h2>
             <div class="institution">Brown University</div>
-          </div>
-        </div>
-
+          </td>
+        </tr>
+      </table>
       <hr/>
-
-        <div class="stint">
-          <div class="time">
-            2010
-          </div>
-          <div class="activity">
-            <h2>Japanese Language Proficiency Test N5</h2>
-          </div>
-        </div>
-
+      <table>
+        <tr>
+          <td class="time">
+            2021
+          </td>
+          <td class="activity">
+            <h2>Mentor</h2>
+            <div class="institution">Google Summer of Code</div>
+            <p><a href="https://summerofcode.withgoogle.com/archive/2021/projects/5060935458226176/">Fixing ihaskell-widgets</a></p>
+          </td>
+        </tr>
+      </table>
     </div>
   </body>
 </html>
